@@ -7,22 +7,45 @@ $(document).ready(function(){
 	var initial = 16;
 	create(initial);
 	var divs = $(".container > div");
-	divs.css({"height": "" + conHeight/initial + "px","width": "" + conWidth/initial + "px"});
 	divs.hover(function(){
 		$(this).addClass("highlighta");
 	},function(){
 
-		$(this).fadeTo("slow",1,function(){$(this).removeClass("highlighta");});
+		$(this).fadeTo(400,1,function(){$(this).removeClass("highlighta");});
 		
 
 	});
 	divs.click(function(){
 		$(this).toggleClass("selected");
 	});
-
-
 });
 
+function option()
+{
+	
+	var x =prompt("Enter a number for a new grid from 1 to 128","Enter your number here!");
+	if(x > 0 && x < 129)
+	{
+		$(".container").empty();
+		create(x);
+		var divs = $(".container > div");
+		divs.hover(function(){
+			$(this).addClass("highlighta");
+		},function(){
+
+			$(this).fadeTo("slow",1,function(){$(this).removeClass("highlighta");});
+			
+
+		});
+		divs.click(function(){
+			$(this).toggleClass("selected");
+		});
+	}
+	else
+	{
+		window.alert("I'm sorry Dave, I'm afraid I can't do that");
+	}
+}
 
 
 function create(z)
@@ -39,4 +62,6 @@ function create(z)
 		}
 	}
 	$(".container").append(count);
+
+	$(".container > div").css({"height": "" + conHeight/z + "px","width": "" + conWidth/z + "px"});
 }

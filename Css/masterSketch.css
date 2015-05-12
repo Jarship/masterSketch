@@ -1,6 +1,21 @@
 body{
 	background-color: #DCDCDC;
 }
+.buttons{
+	vertical-align: center;
+	border: .5px solid #2222ff;
+	width:12%;
+	height:3%;
+	left:35%;
+	top:1%;
+	position:absolute;
+}
+.buttons button{
+	text-decoration: none;
+	color:black;
+	text-align: center;
+	
+}
 .container{
 	position:absolute;
 	left:20%;
@@ -16,7 +31,7 @@ div div{
 	padding:0;
 	border-top:0;
 	border-bottom:0;
-	display:inline-block;
+	float:left;
 	vertical-align:top;
 }
 .highlighta{
