@@ -1,0 +1,20 @@
+body{
+	background-color: #DCDCDC;
+}
+.container{
+	position:absolute;
+	left:20%;
+	top:5%;
+	height:80%;
+	width:60%;
+}
+.container > div{
+	height: 5.5%;
+	margin:2px 2px; 
+	width: 5.5%;
+	background-color: #000;
+	display:inline-block;
+}
+.highlight{
+	background-color: #6405ED;
+}
