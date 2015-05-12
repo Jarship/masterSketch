@@ -11,7 +11,9 @@ $(document).ready(function(){
 	divs.hover(function(){
 		$(this).addClass("highlighta");
 	},function(){
-		$(this).removeClass("highlighta");
+
+		$(this).fadeTo("slow",1,function(){$(this).removeClass("highlighta");});
+		
 
 	});
 	divs.click(function(){
@@ -31,10 +33,10 @@ function create(z)
 	{
 		for(var y = 0; y < z; y++)
 		{
-			$(".container").append("<div></div>")
-			/*count[num] = "<div></div>";*/
+			/*$(".container").append("<div></div>")*/
+			count[num] = "<div></div>";
 			num++;
 		}
 	}
-	/*$(".container").append(count);*/
+	$(".container").append(count);
 }
